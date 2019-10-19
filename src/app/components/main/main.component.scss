@@ -1,0 +1,32 @@
+@import "~src/styles";
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+section {
+  width: 50%;
+  @include for-phone-only {
+    width: 100%;
+  }
+}
+
+.fire-map {
+
+  @include for-phone-only {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.fire-list {
+  min-height: 100vh;
+}
+
+
