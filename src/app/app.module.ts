@@ -8,19 +8,22 @@ import {
   MatFormFieldModule,
   MatIconModule, MatInputModule,
   MatListModule, MatSlideToggleModule, MatSnackBarModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatButtonModule, MatCardModule
 } from '@angular/material'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
-import { MatButtonModule } from '@angular/material'
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { LoginPanelComponent } from './components/login-panel/login-panel.component'
-import { MatCardModule } from '@angular/material'
-import { HttpClientModule } from '@angular/common/http'
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
+import { MapPickerComponent } from './components/map-picker/map-picker.component'
+import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 import { MapComponent } from './components/map/map.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
@@ -38,6 +41,7 @@ import { ReportFireComponent } from './components/report-fire/report-fire.compon
     RegistrationPanelComponent,
     FireDetailsComponent,
     AdminPanelComponent,
+    MapPickerComponent,
     ReportFireComponent
   ],
   imports: [
