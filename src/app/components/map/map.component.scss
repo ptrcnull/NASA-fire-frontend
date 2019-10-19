@@ -1,0 +1,10 @@
+@import "~src/styles";
+
+#map {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  @include for-phone-only {
+    height: 50vh !important;
+  }
+}
