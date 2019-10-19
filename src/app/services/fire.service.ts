@@ -14,7 +14,8 @@ export class FireService {
   }
 
   async getAllFires () {
-    return await this.http.get<FireNotification[]>(`${ this.url }/`).toPromise()
+    const body = await this.http.get<FireNotification[]>(`${ this.url }/`).toPromise()
+    return body || []
   }
 
 }
