@@ -1,0 +1,37 @@
+mat-card {
+  width: 100%;
+  border: black solid 1px;
+}
+
+
+.icon-category {
+  &--human {
+    background: darkblue;
+  }
+
+  &--building {
+
+    background: deepskyblue;
+  }
+
+  &--leaf {
+    background: green;
+  }
+
+  &--electricity {
+
+    background: #ffbf00;
+  }
+
+  &--danger {
+    background: black;
+
+  }
+
+}
+
+
+.icon-category[disabled=true] {
+  background: gray;
+
+}
