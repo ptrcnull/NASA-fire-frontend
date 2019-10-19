@@ -13,3 +13,15 @@
     width: 100%;
   }
 }
+
+.router{
+  background: grey;
+  overflow-y: scroll;
+  padding: 0 8px;
+
+  height: calc(100vh - 80px);
+
+  @include for-phone-only {
+    height: auto !important;
+  }
+}

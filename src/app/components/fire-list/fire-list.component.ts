@@ -8,117 +8,50 @@ import { Component, OnInit } from '@angular/core'
 export class FireListComponent implements OnInit {
   fires = [
     {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: false,
-      isFire: false,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartamentDescription: '',
-      arePeople: false,
-      isWood: false,
-      isBuilding: false,
-      isHazardousMaterial: false,
-      isElectricity: false,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
+
+      id: 1,
+      reporterId: true,
+      x: 1,
+      y: 1,
+      startDate: '02-32-1999',
+      fireReportApproveCounter: 1,
+      isFireTeam: true,
       isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
+      description: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
+      fireDepartmentDescription: 'blablalbal',
       arePeople: true,
       isWood: true,
       isBuilding: true,
-      isHazardousMaterial: true,
       isElectricity: true,
-      address: 'potulicka 12/11'
+      isHazardousMaterial: true,
+      isReal: false,
+      photo: '',
+      address: 'ul.asdsadasd 12'
     },
     {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
+
+      id: 1,
+      reporterId: true,
+      x: 1,
+      y: 1,
+      startDate: '02-32-1999',
+      fireReportApproveCounter: 1,
+      isFireTeam: true,
       isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
+      description: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
+      fireDepartmentDescription: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
       arePeople: true,
       isWood: true,
       isBuilding: true,
-      isHazardousMaterial: true,
       isElectricity: true,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
-      isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
       isHazardousMaterial: true,
-      isElectricity: true,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
-      isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isHazardousMaterial: true,
-      isElectricity: true,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
-      isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isHazardousMaterial: true,
-      isElectricity: true,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
-      isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isHazardousMaterial: true,
-      isElectricity: true,
-      address: 'potulicka 12/11'
-    },
-    {
-      startDate: '01/02/2019',
-      fireNotificationApproveCounter: '',
-      fireTeam: true,
-      isFire: true,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet?',
-      fireDepartmentDescription: '',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isHazardousMaterial: true,
-      isElectricity: true,
-      address: 'potulicka 12/11'
-    }]
+      isReal: true,
+      photo: '',
+
+      address: 'ul.asdsadasd 12'
+    }
+
+  ]
 
   constructor () {
   }
@@ -126,4 +59,7 @@ export class FireListComponent implements OnInit {
   ngOnInit () {
   }
 
+  add () {
+    console.log('lol')
+  }
 }

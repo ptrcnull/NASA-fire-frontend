@@ -21,7 +21,7 @@ mat-card {
   display: flex;
   align-items: center;
 
-  mat-icon{
+  mat-icon {
     margin-right: 4px;
   }
 }
@@ -35,8 +35,23 @@ mat-card {
 
   .bottom-line {
     display: flex;
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+
+  .primary-line {
+    display: flex;
+    align-items: center;
     color: grey;
   }
+}
+
+.firefighter {
+  width: 24px;
+  height: 24px;
+  background-image: url("~src/assets/firefighter.png");;
 }
 
 .spacer {
@@ -47,28 +62,14 @@ mat-card {
 .icon-category {
   margin-right: 4px !important;
 
-  &--human {
+  &--questionmark {
     background: darkblue;
   }
 
-  &--building {
-
-    background: deepskyblue;
-  }
-
-  &--leaf {
-    background: green;
-  }
-
-  &--electricity {
-
+  &--firefighter {
     background: #ffbf00;
   }
 
-  &--danger {
-    background: black;
-
-  }
 
 }
 
@@ -76,4 +77,18 @@ mat-card {
   background: gray;
   color: lightgray;
 
+}
+
+.fire-approve {
+  color: white;
+  background: red;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }

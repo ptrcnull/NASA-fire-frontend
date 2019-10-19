@@ -1,0 +1,30 @@
+<mat-card>
+
+
+
+  <button mat-mini-fab [disabled]="!fire.arePeople" class="icon-category icon-category--human">
+    <mat-icon>
+      accessibility
+    </mat-icon>
+  </button>
+  <button mat-mini-fab [disabled]="! fire.isBuilding " class="icon-category icon-category--building">
+    <mat-icon>
+      house
+    </mat-icon>
+  </button>
+  <button mat-mini-fab [disabled]="!fire.isWood " class="icon-category icon-category--leaf">
+    <mat-icon>
+      eco
+    </mat-icon>
+  </button>
+  <button mat-mini-fab [disabled]="!fire.isElectricity " class="icon-category icon-category--electricity">
+    <mat-icon>
+      flash_on
+    </mat-icon>
+  </button>
+  <button mat-mini-fab [disabled]="! fire.isHazardousMaterial " class="icon-category icon-category--danger">
+    <mat-icon>
+      format_color_fill
+    </mat-icon>
+  </button>
+</mat-card>

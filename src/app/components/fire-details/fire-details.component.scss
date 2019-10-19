@@ -1,0 +1,28 @@
+
+.icon-category {
+  margin-right: 4px !important;
+
+  &--human {
+    background: darkblue;
+  }
+
+  &--building {
+
+    background: deepskyblue;
+  }
+
+  &--leaf {
+    background: green;
+  }
+
+  &--electricity {
+
+    background: #ffbf00;
+  }
+
+  &--danger {
+    background: black;
+
+  }
+
+}

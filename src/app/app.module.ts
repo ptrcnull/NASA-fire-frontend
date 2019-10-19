@@ -13,7 +13,8 @@ import { LoginPanelComponent } from './components/login-panel/login-panel.compon
 import { MatCardModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
-import { MapComponent } from './components/map/map.component'
+import { MapComponent } from './components/map/map.component';
+import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MapComponent } from './components/map/map.component'
     MapComponent,
     FireListComponent,
     LoginPanelComponent,
-    RegistrationPanelComponent
+    RegistrationPanelComponent,
+    FireDetailsComponent
   ],
   imports: [
     BrowserModule,
