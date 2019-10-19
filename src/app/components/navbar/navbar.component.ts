@@ -16,21 +16,13 @@ export class NavbarComponent implements OnInit {
   ngOnInit () {
   }
 
-  // onLogIn ($event: Event) {
-  //   // @TODO
-  // }
-
-  openDialog (): void {
-    const dialogRef = this.dialog.open(LoginPanelComponent, {
+  onLogIn ($event: Event) {
+    this.dialog.open(LoginPanelComponent, {
       width: '250px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    })
   }
 
-  // onLogOut ($event: Event) {
-  //   localStorage.removeItem('username')
-  // }
+  onLogOut ($event: Event) {
+    localStorage.removeItem('username')
+  }
 }
