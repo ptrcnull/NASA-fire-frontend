@@ -1,4 +1,6 @@
+
 <img src="/assets/icfire-logo.jpg" alt="logo">
+
 <div *ngIf="localStorage.getItem('username'); else login" class="buttons">
   <a (click)="onLogOut($event)">LOG OUT</a>
 </div>
