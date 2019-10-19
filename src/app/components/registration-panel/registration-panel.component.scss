@@ -1,4 +1,4 @@
-.box input[type="text"] {
+.box input[type="text"] , .box input[type="password"]{
   border: 0;
   background: none;
   display: block;
@@ -35,4 +35,3 @@
   text-transform: uppercase;
   transition: 5s;
 }
-

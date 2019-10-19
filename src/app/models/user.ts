@@ -5,4 +5,5 @@ export interface User {
   cellPhoneNumber: string
   email: string
   photo: string
+  password: string
 }

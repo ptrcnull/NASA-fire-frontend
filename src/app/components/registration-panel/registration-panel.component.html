@@ -1,17 +1,25 @@
-
 <div class="box">
   <h4 mat-dialog-title>Who are you?</h4>
   <div mat-dialog-content>
-    <input #name type="text" name="" placeholder="Name">
-    <input #surname type="text" name="" placeholder="Surname">
-    <input #mobilephone type="text" name="" placeholder="Mobile Phone">
+    <input #name type="text" name="" placeholder="Name" [(ngModel)]="user.name">
+    <input #surname type="text" name="" placeholder="Surname" [(ngModel)]="user.surname">
+    <input #cellPhoneNumber type="text" name="" placeholder="Mobile Phone" [(ngModel)]="user.cellPhoneNumber">
+    <input #email type="text" name="" placeholder="Email" [(ngModel)]="user.email">
+    <input #password [type]="hide ? 'password' : 'text'" name="" [pattern]="patternNormal" [formControl]="fPassword"
+           placeholder="Password" required [(ngModel)]="user.password">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
+      'visibility_off'}}</mat-icon>
+    <mat-error *ngIf="fPassword.errors&&fPassword.errors.pattern">{{errorMgs}}</mat-error>
 
   </div>
   <div mat-dialog-actions>
-  <button mat-icon-button class="icon">
-    <mat-icon matTooltip="delete" color="warn">add</mat-icon>
-  </button>
-  <input type="submit" name="newaccount" value="Save">
+
+    <button mat-mini-fab class="icon-category icon-category--add">
+      <mat-icon>
+        add
+      </mat-icon>
+    </button>
+    <input type="submit" name="newaccount" value="Save" (click)="addUser(user)">
   </div>
 
 </div>
