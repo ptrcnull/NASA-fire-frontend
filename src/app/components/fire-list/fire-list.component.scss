@@ -1,10 +1,42 @@
+.container {
+  padding: 0 8px;
+}
+
 mat-card {
-  width: 100%;
-  border: black solid 1px;
+  margin: 8px;
+}
+
+.date {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+
+  mat-icon{
+    margin-right: 4px;
+  }
+}
+
+
+.card-row {
+  .upper-line {
+    display: flex;
+
+  }
+
+  .bottom-line {
+    display: flex;
+    color: grey;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
 }
 
 
 .icon-category {
+  margin-right: 4px !important;
+
   &--human {
     background: darkblue;
   }
@@ -30,8 +62,8 @@ mat-card {
 
 }
 
-
 .icon-category[disabled=true] {
   background: gray;
+  color: lightgray;
 
 }

@@ -1,36 +1,54 @@
-<mat-card *ngFor="let fire of fires">
-
-  <p>{{ fire.description }}</p>
-  <p>{{ fire.startDate }}</p>
+<div class="container">
 
 
-  <button mat-mini-fab [disabled]="!fire.arePeople" class="icon-category--human">
-    <mat-icon>
-      accessibility
-    </mat-icon>
-  </button>
-  <button mat-mini-fab [disabled]="! fire.isBuilding " class="icon-category--building">
-    <mat-icon>
-      house
-    </mat-icon>
-  </button>
+  <mat-card *ngFor="let fire of fires">
 
-  <button mat-mini-fab [disabled]="!fire.isWood " class="icon-category--leaf">
-    <mat-icon>
-      eco
-    </mat-icon>
-  </button>
 
-  <button mat-mini-fab [disabled]="!fire.isElectricity " class="icon-category--electricity">
-    <mat-icon>
-      flash_on
-    </mat-icon>
-  </button>
+    <div class="card-row">
+      <div class="upper-line">
 
-  <button mat-mini-fab [disabled]="! fire.isHazardousMaterial " class="icon-category--danger">
-    <mat-icon>
-      format_color_fill
-    </mat-icon>
-  </button>
+        <h4>
+          {{ fire.description }}
+        </h4>
 
-</mat-card>
+        <span class="spacer"></span>
+          <p class="date">
+            <mat-icon>schedule</mat-icon>
+            {{ fire.startDate }}
+        </p>
+      </div>
+      <div class="bottom-line">
+        <p><mat-icon>room</mat-icon></p>
+          <p>{{ fire.address}}</p>
+
+        <span class="spacer"></span>
+        <button mat-mini-fab [disabled]="!fire.arePeople" class="icon-category icon-category--human">
+          <mat-icon>
+            accessibility
+          </mat-icon>
+        </button>
+        <button mat-mini-fab [disabled]="! fire.isBuilding " class="icon-category icon-category--building">
+          <mat-icon>
+            house
+          </mat-icon>
+        </button>
+        <button mat-mini-fab [disabled]="!fire.isWood " class="icon-category icon-category--leaf">
+          <mat-icon>
+            eco
+          </mat-icon>
+        </button>
+        <button mat-mini-fab [disabled]="!fire.isElectricity " class="icon-category icon-category--electricity">
+          <mat-icon>
+            flash_on
+          </mat-icon>
+        </button>
+        <button mat-mini-fab [disabled]="! fire.isHazardousMaterial " class="icon-category icon-category--danger">
+          <mat-icon>
+            format_color_fill
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+
+  </mat-card>
+</div>

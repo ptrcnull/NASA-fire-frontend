@@ -18,7 +18,8 @@ export class FireListComponent implements OnInit {
       isWood: false,
       isBuilding: false,
       isHazardousMaterial: false,
-      isElectricity: false
+      isElectricity: false,
+      address: 'potulicka 12/11'
     },
     {
       startDate: '01/02/2019',
@@ -31,7 +32,8 @@ export class FireListComponent implements OnInit {
       isWood: true,
       isBuilding: true,
       isHazardousMaterial: true,
-      isElectricity: true
+      isElectricity: true,
+      address: 'potulicka 12/11'
     }]
 
   constructor () {

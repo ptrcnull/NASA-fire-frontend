@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material'
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { MainComponent } from './components/main/main.component'
+import { NavbarComponent } from './components/navbar/navbar.component'
 
 @NgModule({
   declarations: [
