@@ -1,5 +1,15 @@
-.container {
+@import "~src/styles";
+
+:host {
+  background: grey;
+  overflow-y: scroll;
   padding: 0 8px;
+
+  height: calc(100vh - 80px);
+
+  @include for-phone-only {
+    height: auto !important;
+  }
 }
 
 mat-card {

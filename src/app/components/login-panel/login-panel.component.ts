@@ -26,6 +26,8 @@ export class LoginPanelComponent {
     const username = this.username.nativeElement.value
     const password = this.password.nativeElement.value
 
+    localStorage.setItem('username', username)
+
     // this.httpClient.post<void>(`${environment.api.url}/login`, {}, {
     //   headers: {
     //     Authorization: `Basic ${btoa(username + ':' + password)}`

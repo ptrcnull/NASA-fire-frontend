@@ -7,10 +7,8 @@ import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
-import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from '@angular/material'
+import { MatButtonModule } from '@angular/material'
 import { FireListComponent } from './components/fire-list/fire-list.component'
-import { MainComponent } from './components/main/main.component'
-import { NavbarComponent } from './components/navbar/navbar.component'
 import { LoginPanelComponent } from './components/login-panel/login-panel.component'
 import { MatCardModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
@@ -34,7 +32,7 @@ import { MapComponent } from './components/map/map.component'
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
     HttpClientModule,
     MatDialogModule
   ],
