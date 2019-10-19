@@ -5,6 +5,8 @@ import { MatDialog, MatDialogRef } from '@angular/material'
 import { ReportFireComponent } from '../report-fire/report-fire.component'
 import { FireService } from '../../services/fire.service'
 import { ActivatedRoute } from '@angular/router'
+import { LoginPanelComponent } from '../login-panel/login-panel.component'
+import { RegistrationPanelComponent } from '../registration-panel/registration-panel.component'
 
 @Component({
   selector: 'app-fire-details',

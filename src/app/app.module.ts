@@ -61,6 +61,7 @@ import { ReportFireComponent } from './components/report-fire/report-fire.compon
     MatDatepickerModule,
     FormsModule,
     MatListModule,
+    MatListModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatFormFieldModule,
