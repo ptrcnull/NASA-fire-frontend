@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 
-import { MatDialogModule, MatIconModule, MatToolbarModule } from '@angular/material'
+import { MatDialogModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
@@ -36,7 +36,8 @@ import { FireDetailsComponent } from './components/fire-details/fire-details.com
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
