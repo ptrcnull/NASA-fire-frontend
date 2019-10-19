@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { FireService } from '../../services/fire.service'
+import { FireNotification } from '../../models/fireNotification'
 
 @Component({
   selector: 'app-fire-list',
@@ -6,60 +8,21 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./fire-list.component.scss']
 })
 export class FireListComponent implements OnInit {
-  fires = [
-    {
+  fires: FireNotification[]
 
-      id: 1,
-      reporterId: true,
-      x: 1,
-      y: 1,
-      startDate: '02-32-1999',
-      fireReportApproveCounter: 1,
-      isFireTeam: true,
-      isFire: true,
-      description: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
-      fireDepartmentDescription: 'blablalbal',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isElectricity: true,
-      isHazardousMaterial: true,
-      isReal: false,
-      photo: '',
-      address: 'ul.asdsadasd 12'
-    },
-    {
-
-      id: 1,
-      reporterId: true,
-      x: 1,
-      y: 1,
-      startDate: '02-32-1999',
-      fireReportApproveCounter: 1,
-      isFireTeam: true,
-      isFire: true,
-      description: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
-      fireDepartmentDescription: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
-      arePeople: true,
-      isWood: true,
-      isBuilding: true,
-      isElectricity: true,
-      isHazardousMaterial: true,
-      isReal: true,
-      photo: '',
-
-      address: 'ul.asdsadasd 12'
-    }
-
-  ]
-
-  constructor () {
+  constructor (private fireService: FireService) {
   }
 
   ngOnInit () {
+    this.getAllFires()
   }
 
   add () {
     console.log('lol')
+  }
+
+  async getAllFires () {
+    this.fires = await this.fireService.getAllFires()
+
   }
 }
