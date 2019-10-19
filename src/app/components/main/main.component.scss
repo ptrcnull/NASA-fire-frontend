@@ -8,8 +8,6 @@
   justify-content: center;
 }
 
-
-
 section {
   width: 50%;
   @include for-phone-only {
@@ -27,6 +25,7 @@ section {
 
 .fire-list {
   min-height: 100vh;
+  background: grey;
 }
 
 
