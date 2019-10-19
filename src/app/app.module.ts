@@ -11,18 +11,20 @@ import { MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule } from 
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { MainComponent } from './components/main/main.component'
 import { NavbarComponent } from './components/navbar/navbar.component'
-import { LoginPanelComponent } from './components/login-panel/login-panel.component';
+import { LoginPanelComponent } from './components/login-panel/login-panel.component'
 import { MatCardModule} from '@angular/material'
-import {HttpClientModule} from '@angular/common/http';
-import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component';
+import { HttpClientModule } from '@angular/common/http'
+import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
+import { MapComponent } from './components/map/map.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     NavbarComponent,
-    FireListComponent
-    LoginPanelComponent
+    MapComponent,
+    FireListComponent,
+    LoginPanelComponent,
     RegistrationPanelComponent
   ],
   imports: [
