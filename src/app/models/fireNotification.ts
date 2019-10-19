@@ -16,5 +16,6 @@ export interface FireNotification {
   isElectricity: boolean,
   isHazardousMaterial: boolean,
   isReal: boolean,
-  photo: ''
+  photo: '',
+  address: ''
 }

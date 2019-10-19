@@ -18,4 +18,8 @@ export class FireService {
     return body || []
   }
 
+  async getFire (id: number) {
+    return await this.http.get<FireNotification>(`${ this.url }/${ id }`).toPromise()
+  }
+
 }

@@ -27,8 +27,7 @@
       <input matInput placeholder="Email" [(ngModel)]="userToSave.email">
     </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="save(userToSave)"> save</button>
-    <button mat-raised-button color="warn" (click)="userToSave.id"> delete</button>
+    <button mat-raised-button color="primary" (click)="save(userToSave)" class="action-btn"> save</button>
   </mat-expansion-panel>
 
   <mat-expansion-panel *ngFor="let user of users">
@@ -60,7 +59,7 @@
       <input matInput placeholder="Email" [(ngModel)]="user.email">
     </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="update(user)"> save</button>
-    <button mat-raised-button color="warn" (click)="delete(user.id)"> delete</button>
+    <button mat-raised-button color="primary" (click)="update(user)" class="action-btn"> save</button>
+    <button mat-raised-button color="warn" (click)="delete(user.id)" class="action-btn"> delete</button>
   </mat-expansion-panel>
 </mat-accordion>

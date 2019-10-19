@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { Location } from '@angular/common'
 import { FireNotification } from '../../models/fireNotification'
+import { FireService } from '../../services/fire.service'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-fire-details',
@@ -9,29 +11,11 @@ import { FireNotification } from '../../models/fireNotification'
 })
 export class FireDetailsComponent implements OnInit {
 
-  fire = {
+  fire: FireNotification = null
 
-    id: 1,
-    reporterId: true,
-    x: 1,
-    y: 1,
-    startDate: '02-32-1999',
-    fireReportApproveCounter: 1,
-    isFireTeam: true,
-    isFire: true,
-    description: 'Lorem iingdi, est fugiat laudantium magnam minima modi voluptas?',
-    fireDepartmentDescription: 'blablalbal',
-    arePeople: true,
-    isWood: true,
-    isBuilding: true,
-    isElectricity: true,
-    isHazardousMaterial: true,
-    isReal: false,
-    photo: '',
-    address: 'ul.asdsadasd 12'
-  }
-
-  constructor (private location: Location) {
+  constructor (private location: Location,
+               private fireService: FireService,
+               private route: ActivatedRoute) {
   }
 
   backClicked () {
@@ -39,6 +23,13 @@ export class FireDetailsComponent implements OnInit {
   }
 
   ngOnInit () {
+    this.getFire()
+  }
+
+  async getFire () {
+    const id = +this.route.snapshot.paramMap.get('id')
+    console.log(id)
+    this.fire = await this.fireService.getFire(id)
   }
 
 }
