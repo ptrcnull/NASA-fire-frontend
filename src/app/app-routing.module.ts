@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 import { MainComponent } from './components/main/main.component'
+import { LoginPanelComponent } from './components/login-panel/login-panel.component'
+import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
 
 const routes: Routes = [
   {
     path: 'main',
     component: MainComponent
+  },
+  {
+    path: 'login',
+    component: LoginPanelComponent
+  },
+  {
+    path: 'registration',
+    component: RegistrationPanelComponent
   },
   {
     path: '',
@@ -15,8 +25,8 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
