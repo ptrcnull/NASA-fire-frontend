@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    // host: 'localhost',
+    host: '178.32.217.80',
+    port: '48322',
+    path: '/api',
+    ssl: false,
+
+    get url () {
+      return `http${ this.ssl ? 's' : '' }://${ this.host }:${ this.port }${ this.path }`
+    }
+  }
 }
 /*
  * For easier debugging in development mode, you can import the following file
