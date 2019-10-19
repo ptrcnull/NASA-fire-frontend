@@ -10,17 +10,17 @@ const routes: Routes = [
     component: MainComponent
   },
   {
-    path: '',
-    redirectTo: 'main',
-    pathMatch: 'full'
-  },
-  {
     path: 'login',
     component: LoginPanelComponent
   },
   {
     path: 'registration',
     component: RegistrationPanelComponent
+  },
+  {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
   }
 ]
 

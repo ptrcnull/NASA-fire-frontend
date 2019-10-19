@@ -1,8 +1,10 @@
-import { Component, ViewChild } from '@angular/core'
+import { Component, Inject, ViewChild } from '@angular/core'
 
 import { Router } from '@angular/router'
 import { environment } from '../../../environments/environment'
 import { HttpClient } from '@angular/common/http'
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material'
+import { RegistrationPanelComponent } from '../registration-panel/registration-panel.component'
 
 
 @Component({
@@ -15,7 +17,7 @@ export class LoginPanelComponent {
   @ViewChild('username', { static: false }) username: { nativeElement: HTMLInputElement }
   @ViewChild('password', { static: false }) password: { nativeElement: HTMLInputElement }
 
-  constructor(private httpClient: HttpClient, private router: Router) { }
+  constructor ( private httpClient: HttpClient, private router: Router, public dialog: MatDialog) { }
 
    async tryLogin() {
 
@@ -36,5 +38,13 @@ export class LoginPanelComponent {
     //     alert('Invalid credentials')
     //   })
   }
+  openDialog (): void {
+    const dialogRef = this.dialog.open(RegistrationPanelComponent, {
+      width: '250px',
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

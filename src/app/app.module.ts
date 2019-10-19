@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 
-import { MatIconModule, MatToolbarModule } from '@angular/material'
+import { MatDialogModule, MatIconModule, MatToolbarModule } from '@angular/material'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
@@ -12,7 +12,7 @@ import { FireListComponent } from './components/fire-list/fire-list.component'
 import { MainComponent } from './components/main/main.component'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { LoginPanelComponent } from './components/login-panel/login-panel.component';
-import { MatCardModule, MatIconModule } from '@angular/material'
+import { MatCardModule} from '@angular/material'
 import {HttpClientModule} from '@angular/common/http';
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component';
 
@@ -34,6 +34,7 @@ import { RegistrationPanelComponent } from './components/registration-panel/regi
     MatCardModule,
     MatButtonModule
     HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
