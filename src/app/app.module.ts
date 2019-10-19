@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 
-import { MatDialogModule, MatIconModule, MatToolbarModule } from '@angular/material'
+import { MatDialogModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
@@ -13,7 +13,8 @@ import { LoginPanelComponent } from './components/login-panel/login-panel.compon
 import { MatCardModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
-import { MapComponent } from './components/map/map.component'
+import { MapComponent } from './components/map/map.component';
+import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MapComponent } from './components/map/map.component'
     MapComponent,
     FireListComponent,
     LoginPanelComponent,
-    RegistrationPanelComponent
+    RegistrationPanelComponent,
+    FireDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { MapComponent } from './components/map/map.component'
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

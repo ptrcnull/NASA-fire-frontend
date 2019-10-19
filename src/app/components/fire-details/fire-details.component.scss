@@ -1,0 +1,126 @@
+mat-card {
+  margin-top: 8px;
+}
+
+
+.icon-category {
+  margin-right: 4px !important;
+
+  &--human {
+    background: darkblue;
+  }
+
+  &--building {
+
+    background: deepskyblue;
+  }
+
+  &--leaf {
+    background: green;
+  }
+
+  &--electricity {
+
+    background: #ffbf00;
+  }
+
+  &--danger {
+    background: black;
+
+  }
+
+  &--questionmark {
+    background: darkblue;
+  }
+
+  &--firefighter {
+    background: #ffbf00;
+  }
+
+
+}
+
+
+.icon-category {
+  margin-right: 4px !important;
+
+}
+
+.fire-approve {
+  color: white;
+  background: red;
+}
+
+.icon-category[disabled=true] {
+  background: gray;
+  color: lightgray;
+}
+
+.icon {
+  width: 24px!important;
+  height: 24px;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.btn-fire {
+  width: 100%;
+
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 8px 0;
+  background: white;
+
+  .fire-avatar {
+    width: 100%;
+    position: relative;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &--content {
+    padding: 10px;
+  }
+
+
+  .back-btn {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  &--title {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    font-weight: 400;
+
+  }
+}
+
+.info-icons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+
+
+
