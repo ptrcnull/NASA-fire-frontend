@@ -24,8 +24,7 @@ import { RegistrationPanelComponent } from './components/registration-panel/regi
 import { MapComponent } from './components/map/map.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
-import { FormsModule } from '@angular/forms'
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -59,7 +58,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     FormsModule,
     MatListModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
