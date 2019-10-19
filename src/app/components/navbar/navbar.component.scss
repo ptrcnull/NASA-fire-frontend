@@ -1,7 +1,10 @@
 @import '~@angular/material/theming';
 
 :host {
-  display: block;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  flex-direction: row;
   //padding: 10px;
 
   @include mat-elevation(6);
@@ -9,4 +12,23 @@
 
 img {
   height: 80px;
+}
+
+.buttons {
+  margin-left: auto;
+
+  a {
+    margin: 0 10px;
+    color: #fafafa;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    background-color: cornflowerblue;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background-color: deepskyblue;
+  }
 }
