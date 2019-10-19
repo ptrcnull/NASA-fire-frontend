@@ -3,9 +3,6 @@
   "rules": {
     "array-type": false,
     "arrow-parens": false,
-    "deprecation": {
-      "severity": "warning"
-    },
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
@@ -83,7 +80,8 @@
     "template-banana-in-box": true,
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true
+    "use-pipe-transform-interface": true,
+    "semicolon": false
   },
   "rulesDirectory": [
     "codelyzer"
