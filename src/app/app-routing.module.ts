@@ -5,6 +5,7 @@ import { LoginPanelComponent } from './components/login-panel/login-panel.compon
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
 
 const routes: Routes = [
   {
@@ -34,7 +35,12 @@ const routes: Routes = [
     redirectTo: 'main',
     pathMatch: 'full'
   }
+  , {
+    path: 'admin',
+    component: AdminPanelComponent
+  }
 ]
+
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

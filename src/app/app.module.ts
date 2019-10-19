@@ -1,7 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 
-import { MatDialogModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material'
+import {
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatIconModule, MatInputModule,
+  MatListModule, MatSnackBarModule,
+  MatToolbarModule
+} from '@angular/material'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
@@ -10,11 +18,13 @@ import { AppRoutingModule } from './app-routing.module'
 import { MatButtonModule } from '@angular/material'
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { LoginPanelComponent } from './components/login-panel/login-panel.component'
-import { MatCardModule} from '@angular/material'
+import { MatCardModule } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http'
 import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component'
-import { MapComponent } from './components/map/map.component';
+import { MapComponent } from './components/map/map.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -25,9 +35,12 @@ import { FireDetailsComponent } from './components/fire-details/fire-details.com
     FireListComponent,
     LoginPanelComponent,
     RegistrationPanelComponent,
-    FireDetailsComponent
+    FireDetailsComponent,
+    AdminPanelComponent
   ],
   imports: [
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -37,10 +50,15 @@ import { FireDetailsComponent } from './components/fire-details/fire-details.com
     MatButtonModule,
     HttpClientModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
