@@ -10,15 +10,16 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainComponent,
-    children: [{
-      path: 'details/:id',
-      component: FireDetailsComponent
-    },
+    children: [
+      {
+        path: 'details/:id',
+        component: FireDetailsComponent
+      },
       {
         path: '',
         component: FireListComponent
-      }]
-
+      }
+    ]
   },
   {
     path: 'login',
@@ -36,8 +37,8 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule {
 }
