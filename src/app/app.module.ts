@@ -12,7 +12,9 @@ import { FireListComponent } from './components/fire-list/fire-list.component'
 import { MainComponent } from './components/main/main.component'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { LoginPanelComponent } from './components/login-panel/login-panel.component';
-import {MatCardModule} from "@angular/material";
+import { MatCardModule, MatIconModule } from '@angular/material'
+import {HttpClientModule} from '@angular/common/http';
+import { RegistrationPanelComponent } from './components/registration-panel/registration-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import {MatCardModule} from "@angular/material";
     NavbarComponent,
     FireListComponent
     LoginPanelComponent
+    RegistrationPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import {MatCardModule} from "@angular/material";
     MatIconModule,
     MatCardModule,
     MatButtonModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]
