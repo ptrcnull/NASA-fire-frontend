@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup } from '@angular/forms'
 import { User } from '../../models/user'
+import { UserService } from '../../services/user.service'
+import { MatDialogRef } from '@angular/material'
 
 @Component({
   selector: 'app-registration-panel',
   templateUrl: './registration-panel.component.html',
-  styleUrls: ['./registration-panel.component.scss']
+  styleUrls: [ './registration-panel.component.scss' ]
 })
 export class RegistrationPanelComponent implements OnInit {
 
@@ -14,6 +16,9 @@ export class RegistrationPanelComponent implements OnInit {
 
 
   user: User = {
+    notificationRangeInMeters: 0,
+    x: 0,
+    y: 0,
     id: undefined,
     name: '',
     surname: '',
@@ -28,7 +33,7 @@ export class RegistrationPanelComponent implements OnInit {
   selectedPattern: string
   hide = true
 
-  constructor () {
+  constructor (private service: UserService, private dialogRef: MatDialogRef<RegistrationPanelComponent>) {
   }
 
   ngOnInit () {
@@ -42,9 +47,22 @@ export class RegistrationPanelComponent implements OnInit {
   }
 
 
-  async addUser (user: User) {
-    this.user = user
+  async addUser () {
     console.log(this.user)
+    this.service.addUser(this.user)
+      .then(() => {
+        this.dialogRef.close()
+      })
+      .catch(err => {
+        alert('Something went wrong')
+        console.error(err)
+      })
+  }
+
+  updateCoords ($event: { x: number, y: number }) {
+    console.log($event)
+    this.user.x = $event.x
+    this.user.y = $event.y
   }
 
 }

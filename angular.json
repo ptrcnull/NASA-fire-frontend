@@ -24,17 +24,20 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "leaflet/"
+              },
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "./node_modules/leaflet/dist/leaflet.css"
             ],
-            "scripts": [
-              "./node_modules/leaflet/dist/leaflet.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -93,17 +96,20 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "leaflet/"
+              },
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "./node_modules/leaflet/dist/leaflet.css"
             ],
-            "scripts": [
-              "./node_modules/leaflet/dist/leaflet.js"
-            ]
+            "scripts": []
           }
         },
         "lint": {

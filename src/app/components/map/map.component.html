@@ -1,4 +1,4 @@
-<div id="map">
+<div class="map" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
   <button mat-raised-button>
     <img src="assets/fire.svg" alt="">
     Report Fire
@@ -14,3 +14,4 @@
     </mat-slide-toggle>
   </div>
 </div>
+

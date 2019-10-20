@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-
-declare let L
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
+import { latLng, tileLayer, Map, LeafletMouseEvent, marker, icon } from 'leaflet'
 
 @Component({
   selector: 'app-map-picker',
@@ -8,23 +7,44 @@ declare let L
   styleUrls: [ './map-picker.component.scss' ]
 })
 export class MapPickerComponent implements OnInit {
-  map: any
+  @Output()
+  coords: EventEmitter<{ x: number, y: number }> = new EventEmitter<{x: number, y: number}>();
+
+  options = {
+    layers: [
+      tileLayer('http://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+        detectRetina: true,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      })
+    ],
+    zoom: 5,
+    center: latLng([ 51.9194, 19.1451 ])
+  }
 
   constructor () {
   }
 
-  ngOnInit () {
-    this.map = L.map('map-picker').setView([ 51.9194, 19.1451 ], 5)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(this.map)
-    let marker
-    this.map.on('click', ev => {
+  onMapReady (map: Map) {
+    let m
+    map.on('click', (ev: LeafletMouseEvent) => {
       console.log(ev)
-      this.map.removeLayer(marker)
-      marker = L.marker([ev.latlng.lat, ev.latlng.lng])
-        .addTo(this.map)
+      if (m) {
+        map.removeLayer(m)
+      }
+      this.coords.emit({ x: ev.latlng.lat, y: ev.latlng.lng })
+      m = marker([ ev.latlng.lat, ev.latlng.lng ], {
+        icon: icon({
+          iconSize: [ 25, 41 ],
+          iconAnchor: [ 13, 41 ],
+          iconUrl: 'leaflet/marker-icon.png',
+          shadowUrl: 'leaflet/marker-shadow.png'
+        })
+      })
+        .addTo(map)
     })
+  }
+
+  ngOnInit () {
   }
 
 }

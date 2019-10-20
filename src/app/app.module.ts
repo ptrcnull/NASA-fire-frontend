@@ -14,6 +14,7 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { LeafletModule } from '@asymmetrik/ngx-leaflet'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { MainComponent } from './components/main/main.component'
 import { AppComponent } from './app.component'
@@ -48,6 +49,7 @@ import { ReportFireComponent } from './components/report-fire/report-fire.compon
     MatFormFieldModule,
     MatInputModule,
     BrowserModule,
+    LeafletModule.forRoot(),
     BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
