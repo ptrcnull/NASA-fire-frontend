@@ -1,0 +1,18 @@
+<div class="map" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
+  <button mat-raised-button (click)="createReport()">
+    <img src="assets/fire.svg" alt="">
+    Report Fire
+    <img src="assets/fire.svg" alt="">
+  </button>
+  <div>
+    <mat-slide-toggle
+      mat-slide-toggle
+      class="example-margin"
+      [checked]="checked"
+      (click)="getNasaFires()"
+      color="primary">
+      <img src="assets/nasa.png" class="icon" alt="">
+    </mat-slide-toggle>
+  </div>
+</div>
+

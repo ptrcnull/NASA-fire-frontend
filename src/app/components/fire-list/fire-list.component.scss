@@ -1,0 +1,111 @@
+@import "~src/styles";
+
+:host {
+  background: grey;
+  overflow-y: scroll;
+  padding: 0 8px;
+
+  height: calc(100vh - 80px);
+
+  @include for-phone-only {
+    height: auto !important;
+  }
+}
+
+mat-card {
+  margin: 8px;
+}
+
+.date {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 4px;
+  }
+}
+
+
+.card-row {
+  .upper-line {
+    display: flex;
+
+  }
+
+  .bottom-line {
+    display: flex;
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+
+  .primary-line {
+    display: flex;
+    align-items: center;
+    color: grey;
+  }
+}
+
+.firefighter {
+  width: 24px;
+  height: 24px;
+  background-image: url("~src/assets/firefighter.png");;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.icon-category {
+  margin-right: 4px !important;
+
+  &--questionmark {
+    background: #00a4fff7;
+  }
+
+  &--firefighter {
+    background: #ffbf00;
+  }
+
+
+}
+
+.icon-category[disabled=true] {
+  background: gray;
+  color: lightgray;
+
+}
+
+.fire-approve {
+  color: white;
+  background: red;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.no-content {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  color: white;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+}
+
+.icon-smile {
+  width: 50%;
+}

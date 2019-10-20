@@ -1,0 +1,13 @@
+
+<div class="box">
+  <h4 mat-dialog-title>Log in</h4>
+  <div mat-dialog-content>
+    <input #username type="text" name="" placeholder="Username">
+    <input #password type="password" name="" placeholder="Password">
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" type="submit" name="login" value="Login" (click)="tryLogin()">Login</button>
+    <button mat-raised-button  name="newaccount" value="Create an account" color="accent" (click)="openRegisterDialog()" style="margin: auto"> create account</button>
+  </div>
+
+</div>

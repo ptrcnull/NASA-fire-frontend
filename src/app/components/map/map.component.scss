@@ -1,0 +1,56 @@
+@import "~src/styles";
+
+.map {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+
+  @include for-phone-only {
+    height: 50vh !important;
+  }
+}
+
+button {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  Z-INDEX: 1000;
+  height: 60px;
+
+  border-radius: 8px;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+mat-slide-toggle {
+  z-index: 1000;
+  position: absolute;
+  top: 80px;
+  left: 8px;
+
+  img {
+    position: absolute;
+    left: 8px;
+    bottom: -20px;
+  }
+}
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.leaflet-control-attribution leaflet-control {
+  visibility: hidden !important;
+}
+
+

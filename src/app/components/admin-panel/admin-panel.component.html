@@ -1,0 +1,65 @@
+<mat-accordion>
+  <button mat-raised-button color="primary" class="add-btn" (click)="add()"> Add
+    New User
+    <mat-icon>add</mat-icon>
+  </button>
+  <mat-expansion-panel *ngIf="userToSave">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        New user
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="FirstName" [(ngModel)]="userToSave.name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Surname" [(ngModel)]="userToSave.surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Cell phone number" [(ngModel)]="userToSave.cellPhoneNumber">
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="userToSave.email">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="save(userToSave)" class="action-btn"> save</button>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel *ngFor="let user of users">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ user.id }}
+        {{ user.name }}
+        {{ user.surname }}
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="FirstName" [(ngModel)]="user.name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Surname" [(ngModel)]="user.surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Cell phone number" [(ngModel)]="user.cellPhoneNumber">
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="user.email">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="update(user)" class="action-btn"> save</button>
+    <button mat-raised-button color="warn" (click)="delete(user.id)" class="action-btn"> delete</button>
+  </mat-expansion-panel>
+</mat-accordion>

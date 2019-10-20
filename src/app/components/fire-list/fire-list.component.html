@@ -1,0 +1,46 @@
+
+<mat-card *ngFor="let fire of fires" routerLink="details/{{fire.id}}">
+  <div class="card-row">
+    <div class="primary-line">
+      <button mat-raised-button class="fire-approve icon-category" (click)="add()">
+        <img src="assets/fire.png" class="icon invert" alt="">
+        {{ fire.fireReportApproveCounter }}
+      </button>
+      <button mat-mini-fab *ngIf="!fire.isReal" class="icon-category icon-category--questionmark">
+        <img src="assets/questionmark.jpg" class="icon invert" alt="">
+      </button>
+      <button mat-mini-fab *ngIf="fire.isFireTeam" class="icon-category icon-category--firefighter">
+        <img src="assets/firefighter.png" class="icon firefighter" alt="">
+
+      </button>
+      <span class="spacer"></span>
+      <p class="date">
+        <mat-icon>schedule</mat-icon>
+        {{ fire.startDate }}
+      </p>
+    </div>
+    <div class="upper-line">
+      <p>
+        <mat-icon>room</mat-icon>
+      </p>
+      <p>{{ fire.address}}</p>
+
+      <span class="spacer"></span>
+
+    </div>
+    <div class="bottom-line">
+
+
+      <h4>
+        {{ fire.description }}
+      </h4>
+
+    </div>
+
+  </div>
+</mat-card>
+
+<div class="no-content" *ngIf="!fires.length">
+  <img src="assets/smile.svg" class="icon-smile" alt="">
+  <h4>World is safe and has no fire!</h4>
+</div>

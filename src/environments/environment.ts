@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    // host: 'localhost',
+    host: 'sa19-spring.projekty.space',
+    port: '443',
+    path: '/api',
+    ssl: true,
+
+    get url () {
+      return `http${ this.ssl ? 's' : '' }://${ this.host }:${ this.port }${ this.path }`
+    }
+  }
 }
 /*
  * For easier debugging in development mode, you can import the following file

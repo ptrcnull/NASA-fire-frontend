@@ -81,7 +81,8 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "semicolon": false
+    "semicolon": false,
+    "space-before-function-paren": true
   },
   "rulesDirectory": [
     "codelyzer"

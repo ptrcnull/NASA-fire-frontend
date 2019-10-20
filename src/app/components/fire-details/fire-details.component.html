@@ -1,0 +1,70 @@
+<!--    <div mat-card-avatar class="example-header-image"></div>-->
+
+
+<div class="card" *ngIf="fire">
+
+
+  <div class="fire-avatar">
+    <img src="assets/fire3.jpg" alt="">
+    <button mat-icon-button class="back-btn"
+            routerLink="/main"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2 class="card--title">{{ fire.address }}</h2>
+
+    <div class="info-icons">
+
+      <button mat-mini-fab *ngIf="!fire.isReal" class="icon-category icon-category--questionmark">
+        <img src="assets/questionmark.jpg" class="icon invert" alt="">
+      </button>
+
+      <button mat-mini-fab *ngIf="fire.isFireTeam" class="icon-category icon-category--firefighter">
+        <img src="assets/firefighter.png" class="icon firefighter" alt="">
+      </button>
+    </div>
+  </div>
+
+
+  <div class="card--content">
+    <button mat-raised-button class="fire-approve btn-fire icon-category">
+      <img src="assets/fire.png" class="icon invert" alt="">
+      {{ fire.fireReportApproveCounter }}
+    </button>
+    <h3>Description</h3>
+    <h4 class="desc">{{ fire.description }}</h4>
+    <h3>Categories</h3>
+    <div>
+      <button mat-mini-fab [disabled]="!fire.arePeople" class="icon-category icon-category--human">
+        <mat-icon>
+          accessibility
+        </mat-icon>
+      </button>
+      <button mat-mini-fab [disabled]="! fire.isBuilding " class="icon-category icon-category--building">
+        <mat-icon>
+          house
+        </mat-icon>
+      </button>
+      <button mat-mini-fab [disabled]="!fire.isWood " class="icon-category icon-category--leaf">
+        <mat-icon>
+          eco
+        </mat-icon>
+      </button>
+      <button mat-mini-fab [disabled]="!fire.isElectricity " class="icon-category icon-category--electricity">
+        <mat-icon>
+          flash_on
+        </mat-icon>
+      </button>
+      <button mat-mini-fab [disabled]="! fire.isHazardousMaterial " class="icon-category icon-category--danger">
+        <mat-icon>
+          format_color_fill
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+
+
+</div>
+
+
+
