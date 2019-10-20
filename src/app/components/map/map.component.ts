@@ -33,27 +33,6 @@ export class MapComponent implements OnInit {
         this.addMarker(map, fire)
       }
     })
-
-    this.addMarker(map, {
-      arePeople: false,
-      description: '',
-      fireDepartmentDescription: '',
-      fireReportApproveCounter: 0,
-      id: 0,
-      isBuilding: false,
-      isElectricity: false,
-      isFire: false,
-      isFireTeam: false,
-      isHazardousMaterial: false,
-      isReal: false,
-      isWood: false,
-      photo: '',
-      reporterId: false,
-      startDate: '',
-      x: 53.4285,
-      y: 14.5528,
-      address: ''
-    })
   }
 
   addMarker (map: Map, fire: FireNotification) {
