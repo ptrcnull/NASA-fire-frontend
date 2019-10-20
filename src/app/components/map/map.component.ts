@@ -1,12 +1,11 @@
 import { Component, NgZone, OnInit } from '@angular/core'
 import { CommonService } from '../../services/common.service'
-import { FireNotification } from '../../models/fireNotification'
 import { Router } from '@angular/router'
-import { latLng, tileLayer, Map, marker, icon } from 'leaflet'
+import { gridLayer, icon, latLng, layerGroup, Map, marker, tileLayer } from 'leaflet'
 import { NasaService } from '../../services/nasa.service'
 import { MatDialog } from '@angular/material'
-import { LoginPanelComponent } from '../login-panel/login-panel.component'
 import { ReportFireComponent } from '../report-fire/report-fire.component'
+import { NASAFire } from '../../models/nasaFire'
 
 @Component({
   selector: 'app-map',
@@ -15,13 +14,16 @@ import { ReportFireComponent } from '../report-fire/report-fire.component'
 })
 export class MapComponent implements OnInit {
   checked = false
-  nasaFires: any[] = []
+  nasaFires: NASAFire[] = []
+
+  nasaLayer = layerGroup()
   options = {
     layers: [
       tileLayer('http://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
         detectRetina: true,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      })
+      }),
+      this.nasaLayer
     ],
     zoom: 5,
     center: latLng([51.9194, 19.1451])
@@ -52,6 +54,13 @@ export class MapComponent implements OnInit {
         })
       }
     })
+
+    setInterval(() => this.pullNasa(), 60 * 1000)
+    this.pullNasa()
+  }
+
+  async pullNasa () {
+    this.nasaFires = await this.nasaService.getAllNasaFires()
   }
 
   addMarker (map: Map, coords: { x: number, y: number }, callback?: () => void) {
@@ -71,19 +80,18 @@ export class MapComponent implements OnInit {
     console.log('get nasa locations')
     this.checked = !this.checked
     if (this.checked) {
-      // nasa object
-      // {
-      //   "latitude": "51.487",
-      //   "longitude": "6.718",
-      //   "confidence": "76"
-      // }
-
-      this.nasaFires = await this.nasaService.getAllNasaFires()
-      console.log('done')
-      console.log(this.nasaFires)
+      this.nasaLayer.clearLayers()
     } else {
-      console.log('error')
-      this.nasaFires = []
+      for (const fire of this.nasaFires) {
+        marker([ fire.latitude, fire.longitude ], {
+          icon: icon({
+            iconSize: [24, 24],
+            iconAnchor: [12, 12],
+            iconUrl: 'assets/nasa.png',
+            shadowUrl: ''
+          })
+        }).addTo(this.nasaLayer)
+      }
     }
   }
 
