@@ -45,7 +45,7 @@ export class LoginPanelComponent {
   openRegisterDialog (): void {
     this.dialogRef.close()
     this.dialog.open(RegistrationPanelComponent, {
-      width: '250px'
+      width: '50vw'
     })
   }
 }

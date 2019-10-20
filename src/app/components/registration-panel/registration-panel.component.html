@@ -11,6 +11,8 @@
       'visibility_off'}}</mat-icon>
     <mat-error *ngIf="fPassword.errors&&fPassword.errors.pattern">{{errorMgs}}</mat-error>
 
+    <app-map-picker (coords)="updateCoords($event)"></app-map-picker>
+
   </div>
   <div mat-dialog-actions>
 
@@ -19,8 +21,7 @@
         add
       </mat-icon>
     </button>
-
-    <input type="submit" name="newaccount" value="Save" (click)="addUser(user)">
+    <input type="submit" name="newaccount" value="Save" (click)="addUser()">
   </div>
 
 </div>
