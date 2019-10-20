@@ -16,4 +16,6 @@
 
 <h4>This repository contains frontend part of ICFire project.</h4>
 
+Logo created by <a href="https://www.linkedin.com/in/alanrej/">Alan Rej</a>
+
 <h4><a href="https://github.com/lukaszstefanowski97/NASA_fire_detector">Backend part</a></h4>
