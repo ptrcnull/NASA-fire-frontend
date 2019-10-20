@@ -6,10 +6,10 @@ export const environment = {
   production: false,
   api: {
     // host: 'localhost',
-    host: '178.32.217.80',
-    port: '48322',
+    host: 'sa19-spring.projekty.space',
+    port: '443',
     path: '/api',
-    ssl: false,
+    ssl: true,
 
     get url () {
       return `http${ this.ssl ? 's' : '' }://${ this.host }:${ this.port }${ this.path }`

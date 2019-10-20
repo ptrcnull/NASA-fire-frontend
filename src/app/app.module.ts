@@ -9,7 +9,7 @@ import {
   MatIconModule, MatInputModule,
   MatListModule, MatSlideToggleModule, MatSnackBarModule,
   MatToolbarModule,
-  MatButtonModule, MatCardModule
+  MatButtonModule, MatCardModule, MatSelectModule
 } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http'
@@ -66,7 +66,8 @@ import { ReportFireComponent } from './components/report-fire/report-fire.compon
     MatFormFieldModule,
     MatFormFieldModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

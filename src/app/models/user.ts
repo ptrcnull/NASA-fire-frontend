@@ -9,4 +9,5 @@ export interface User {
   notificationRangeInMeters: number
   x: number
   y: number
+
 }

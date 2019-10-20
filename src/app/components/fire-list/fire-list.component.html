@@ -6,7 +6,7 @@
         <img src="assets/fire.png" class="icon invert" alt="">
         {{ fire.fireReportApproveCounter }}
       </button>
-      <button mat-mini-fab *ngIf="fire.isReal" class="icon-category icon-category--questionmark">
+      <button mat-mini-fab *ngIf="!fire.isReal" class="icon-category icon-category--questionmark">
         <img src="assets/questionmark.jpg" class="icon invert" alt="">
       </button>
       <button mat-mini-fab *ngIf="fire.isFireTeam" class="icon-category icon-category--firefighter">
