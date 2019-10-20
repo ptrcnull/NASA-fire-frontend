@@ -37,10 +37,4 @@ export class FireDetailsComponent implements OnInit {
     this.fire = await this.fireService.getFire(id)
   }
 
-  onReport ($event: Event) {
-    this.dialogRef.close()
-    this.dialog.open(ReportFireComponent, {
-      width: '250px'
-    })
-  }
 }
