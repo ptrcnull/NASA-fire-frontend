@@ -12,7 +12,7 @@ import { MatDialogRef } from '@angular/material'
 export class RegistrationPanelComponent implements OnInit {
 
   // // Minimum six characters, at least one letter and one number:
-  patternNormal: any = '^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$'
+  patternNormal: any = '^(?=.*[A-Za-z])(?=.*\d).{6,}$'
 
 
   user: User = {
@@ -65,4 +65,14 @@ export class RegistrationPanelComponent implements OnInit {
     this.user.y = $event.y
   }
 
+  onPhotoChange ($event: Event) {
+    const file = ($event.target as HTMLInputElement).files[0]
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.user.photo = reader.result as string
+    })
+    if (file) {
+      reader.readAsDataURL(file)
+    }
+  }
 }

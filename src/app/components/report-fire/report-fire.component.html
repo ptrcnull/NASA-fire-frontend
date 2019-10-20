@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="title">
     <img src="assets/fire.svg" alt="">
     <h2>Fire Report</h2><img src="assets/fire.svg" alt="">
@@ -28,6 +29,10 @@
   <mat-form-field>
     <input matInput placeholder="Address" [(ngModel)]="fireReport.address">
   </mat-form-field>
+
+  <h4>Upload photo of fire</h4>
+
+ <input #photo type="file" accept="image/*;capture=camera" (change)="onPhotoChange($event)">
 
   <h4>Danger categories</h4>
   <div class="icons">
@@ -74,4 +79,5 @@
   </div>
   <br>
   <button mat-raised-button color="primary" (click)="send()">SEND</button>
+
 </div>
