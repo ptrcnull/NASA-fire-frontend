@@ -78,13 +78,13 @@ export class ReportFireComponent implements OnInit {
   }
 
   onPhotoChange ($event: Event) {
-    const file = ($event.target as HTMLInputElement).files[0]
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      this.fireReport.photo = reader.result as string
-    })
-    if (file) {
-      reader.readAsDataURL(file)
-    }
+    // const file = ($event.target as HTMLInputElement).files[0]
+    // const reader = new FileReader();
+    // reader.addEventListener('load', () => {
+    //   this.fireReport.photo = reader.result as string
+    // })
+    // if (file) {
+    //   reader.readAsDataURL(file)
+    // }
   }
 }
