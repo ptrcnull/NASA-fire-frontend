@@ -1,4 +1,4 @@
-.box input[type="text"] , .box input[type="password"]{
+.box input[type="text"] , .box input[type="password"], .box input[type="number"] {
   border: 0;
   background: none;
   display: block;
@@ -6,7 +6,7 @@
   text-align: center;
   border: 2px solid;
   padding: 14px 10px;
-  width: 200px;
+  width: 60%;
   outline: none;
   //color: #ff3838;
   border-radius: 24px;
