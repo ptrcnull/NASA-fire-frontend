@@ -9,15 +9,7 @@ import { Snackbar } from '../../snackbar'
   styleUrls: ['./admin-panel.component.scss']
 })
 export class AdminPanelComponent implements OnInit {
-  users: User[] = [{
-    id: 1,
-    name: 'Michał',
-    surname: 'Matera',
-    cellPhoneNumber: '+40 0920234234',
-    email: 'asdasdasd',
-    photo: 'asdsadad',
-    password: ''
-  }]
+  users: User[] = []
   userToSave: User = null
 
   constructor (private adminService: AdminService, private snackbar: Snackbar) {
@@ -28,7 +20,7 @@ export class AdminPanelComponent implements OnInit {
   }
 
   add () {
-    this.userToSave = { cellPhoneNumber: '', email: '', id: 0, name: '', photo: '', surname: '' ,password: ''}
+    this.userToSave = { cellPhoneNumber: '', email: '', id: 0, name: '', photo: '', surname: '', password: '' }
   }
 
   async getAllUsers () {

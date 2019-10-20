@@ -9,7 +9,7 @@ import { CommonService } from '../../services/common.service'
   styleUrls: ['./fire-list.component.scss']
 })
 export class FireListComponent implements OnInit {
-  fires: FireNotification[]
+  fires: FireNotification[] = []
 
   constructor (private fireService: FireService, private common: CommonService) {
   }

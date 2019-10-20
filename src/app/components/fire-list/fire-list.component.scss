@@ -92,3 +92,20 @@ mat-card {
   width: 24px;
   height: 24px;
 }
+
+.no-content {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  color: white;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+}
+
+.icon-smile {
+  width: 50%;
+}
