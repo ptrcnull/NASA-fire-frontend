@@ -8,16 +8,17 @@ declare let L
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: [ './map.component.scss' ]
+  styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
   private map: any
+  checked = false
 
   constructor (private service: CommonService, private router: Router) {
   }
 
   ngOnInit () {
-    this.map = L.map('map').setView([ 51.9194, 19.1451 ], 5)
+    this.map = L.map('map').setView([51.9194, 19.1451], 5)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map)
@@ -30,10 +31,10 @@ export class MapComponent implements OnInit {
 
   addMarker (fire: FireNotification) {
     console.log(fire)
-    L.marker([ fire.x, fire.y ])
+    L.marker([fire.x, fire.y])
       .addTo(this.map)
       .on('click', () => {
-        return this.router.navigate([`/main/details/${fire.id}`])
+        return this.router.navigate([`/main/details/${ fire.id }`])
       })
   }
 }

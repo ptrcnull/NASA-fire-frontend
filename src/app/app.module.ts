@@ -7,7 +7,7 @@ import {
   MatExpansionModule,
   MatFormFieldModule,
   MatIconModule, MatInputModule,
-  MatListModule, MatSnackBarModule,
+  MatListModule, MatSlideToggleModule, MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material'
 import { NavbarComponent } from './components/navbar/navbar.component'
@@ -59,7 +59,9 @@ import { ReportFireComponent } from './components/report-fire/report-fire.compon
     FormsModule,
     MatListModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
