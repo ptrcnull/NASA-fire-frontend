@@ -10,10 +10,10 @@
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
         'visibility_off'}}</mat-icon>
 
-
     <mat-error *ngIf="fPassword.errors&&fPassword.errors.pattern">{{errorMgs}}</mat-error>
 
     Pick your location by pointing on the map<app-map-picker (coords)="updateCoords($event)"></app-map-picker>
+    <input type="number" placeholder="Range of notification (in meters)" [(ngModel)]="user.notificationRangeInMeters">
 
   </div>
 
