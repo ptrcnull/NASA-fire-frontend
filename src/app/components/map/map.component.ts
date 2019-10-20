@@ -7,7 +7,7 @@ import { latLng, tileLayer, Map, marker, icon } from 'leaflet'
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss']
+  styleUrls: [ './map.component.scss' ]
 })
 export class MapComponent implements OnInit {
   checked = false
@@ -25,19 +25,21 @@ export class MapComponent implements OnInit {
   constructor (private service: CommonService, private ngZone: NgZone, private router: Router) {
   }
 
-  ngOnInit () {}
+  ngOnInit () {
+  }
 
   onMapReady (map: Map) {
     this.service.data$.subscribe(res => {
       for (const fire of res) {
-        this.addMarker(map, fire)
+        this.addMarker(map, fire, () => {
+          return this.ngZone.run(() => this.router.navigate([ `/main/details/${ fire.id }` ]))
+        })
       }
     })
   }
 
-  addMarker (map: Map, fire: FireNotification) {
-    console.log(fire)
-    marker([ fire.x, fire.y ], {
+  addMarker (map: Map, coords: { x: number, y: number }, callback?: () => void) {
+    marker([ coords.x, coords.y ], {
       icon: icon({
         iconSize: [ 25, 41 ],
         iconAnchor: [ 13, 41 ],
@@ -46,8 +48,6 @@ export class MapComponent implements OnInit {
       })
     })
       .addTo(map)
-      .on('click', () => {
-        return this.ngZone.run(() => this.router.navigate([`/main/details/${ fire.id }`]))
-      })
+      .on('click', callback)
   }
 }
