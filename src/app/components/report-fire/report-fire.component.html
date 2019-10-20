@@ -1,19 +1,77 @@
 <div class="container">
   <div class="title">
-    <h2>Fire Report</h2>
+    <img src="assets/fire.svg" alt="">
+    <h2>Fire Report</h2><img src="assets/fire.svg" alt="">
   </div>
   <div>
     <mat-form-field>
-      <input matInput placeholder="Input">
+      <input matInput placeholder="Name" [(ngModel)]="fireReport.userName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Surname" [(ngModel)]="fireReport.userSurname">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Phone(+48 ....)" [(ngModel)]="fireReport.userCellPhoneNumber">
     </mat-form-field>
 
     <mat-form-field>
-      <textarea matInput placeholder="Short Description"></textarea>
+      <textarea matInput placeholder="Short Description" [(ngModel)]="fireReport.description"></textarea>
     </mat-form-field>
 
   </div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
+  <div class="map">
+    Mark your location
+    <br>
+    <app-map-picker (coords)="setCords($event)"></app-map-picker>
+  </div>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Address" [(ngModel)]="fireReport.address">
+  </mat-form-field>
+
+  <h4>Danger categories</h4>
+  <div class="icons">
+    <button mat-mini-fab class="icon-category "
+            [ngClass]="{'icon-category--human':icons.arePeople}"
+            (click)="icons.arePeople = !icons.arePeople">
+      <mat-icon>
+        accessibility
+      </mat-icon>
+    </button>
+    <button mat-mini-fab class="icon-category icon-category--building"
+
+            [ngClass]="{'icon-category--building':icons.isBuilding}"
+            (click)="icons.isBuilding = !icons.isBuilding">
+      <mat-icon>
+        house
+      </mat-icon>
+    </button>
+    <button mat-mini-fab class="icon-category icon-category--leaf"
+
+            [ngClass]="{'icon-category--leaf':icons.isWood}"
+            (click)="icons.isWood = !icons.isWood">
+      <mat-icon>
+        eco
+      </mat-icon>
+    </button>
+    <button mat-mini-fab class="icon-category icon-category--electricity"
+
+            [ngClass]="{'icon-category--electricity':icons.isElectricity}"
+            (click)="icons.isElectricity = !icons.isElectricity">
+      <mat-icon>
+        flash_on
+      </mat-icon>
+    </button>
+    <button mat-mini-fab class="icon-category icon-category--danger"
+
+            [ngClass]="{'icon-category--danger':icons.isHazardousMaterial}"
+            (click)="icons.isHazardousMaterial = !icons.isHazardousMaterial">
+      <mat-icon>
+        format_color_fill
+      </mat-icon>
+    </button>
+
+  </div>
+  <br>
+  <button mat-raised-button color="primary" (click)="send()">SEND</button>
 </div>

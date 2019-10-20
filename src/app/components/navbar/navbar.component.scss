@@ -7,11 +7,12 @@
   flex-direction: row;
   //padding: 10px;
 
+
   @include mat-elevation(6);
 
   position: sticky;
   top: 0;
-  z-index: 10000;
+  z-index: 2;
   background-color: white;
 }
 

@@ -1,11 +1,77 @@
-.container{
+:host {
+  z-index: 100 !important;
+
+}
+
+.container {
   padding: 16px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
-mat-form-field{
+mat-form-field {
   width: 100%;
+  max-width: 720px;
 }
+
+.title {
+  display: flex;
+
+  img {
+    width: 24px;
+  }
+}
+
+.map {
+  width: 100%;
+  max-width: 720px;
+  height: 200px;
+}
+
+.icons{
+  button{
+    margin: 0 4px;
+  }
+}
+
+.icon-category {
+  margin-right: 4px !important;
+  background: grey;
+
+  &--human {
+    background: darkblue;
+  }
+
+  &--building {
+
+    background: #673ab7;
+  }
+
+  &--leaf {
+    background: green;
+  }
+
+  &--electricity {
+
+    background: #ffbf00;
+  }
+
+  &--danger {
+    background: black;
+
+  }
+
+  &--questionmark {
+    background: #00a4fff7;
+  }
+
+  &--firefighter {
+    background: #ffbf00;
+  }
+
+
+}
+
