@@ -6,8 +6,8 @@
     <input #password type="password" name="" placeholder="Password">
   </div>
   <div mat-dialog-actions>
-  <input type="submit" name="login" value="Login" (click)="tryLogin()">
-  <input type="submit" name="newaccount" value="Create an account" (click)="openRegisterDialog()">
+    <button mat-raised-button color="primary" type="submit" name="login" value="Login" (click)="tryLogin()">Login</button>
+    <button mat-raised-button  name="newaccount" value="Create an account" color="accent" (click)="openRegisterDialog()" style="margin: auto"> create account</button>
   </div>
 
 </div>

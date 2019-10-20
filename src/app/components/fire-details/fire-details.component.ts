@@ -3,14 +3,14 @@ import { Location } from '@angular/common'
 import { FireNotification } from '../../models/fireNotification'
 import { MatDialog, MatDialogRef } from '@angular/material'
 import { FireService } from '../../services/fire.service'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router'
 import { LoginPanelComponent } from '../login-panel/login-panel.component'
 import { RegistrationPanelComponent } from '../registration-panel/registration-panel.component'
 
 @Component({
   selector: 'app-fire-details',
   templateUrl: './fire-details.component.html',
-  styleUrls: [ './fire-details.component.scss' ]
+  styleUrls: ['./fire-details.component.scss']
 })
 export class FireDetailsComponent implements OnInit {
 
@@ -18,7 +18,9 @@ export class FireDetailsComponent implements OnInit {
 
   constructor (private location: Location,
                private fireService: FireService,
-               private route: ActivatedRoute) {
+               private route: ActivatedRoute, private router: Router) {
+
+
   }
 
   backClicked () {
@@ -29,6 +31,7 @@ export class FireDetailsComponent implements OnInit {
   ngOnInit () {
     this.getFire()
   }
+
 
   async getFire () {
     const id = +this.route.snapshot.paramMap.get('id')

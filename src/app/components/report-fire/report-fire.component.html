@@ -1,53 +1,19 @@
-<div class="box">
-  <h4 mat-dialog-title>Report a fire</h4>
-  <div mat-dialog-content>
-    <mat-form-field appearance="outline" >
-      <mat-label>Description of event</mat-label>
-      <input matInput placeholder="My house is on fire">
+<div class="container">
+  <div class="title">
+    <h2>Fire Report</h2>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Input">
     </mat-form-field>
-    <input #address type="text" name="" placeholder="Address">
 
-    <button mat-mini-fab class="icon-category icon-category--add">
-      <mat-icon>
-        add
-      </mat-icon>
-    </button>
-
-    <div>
-    <button mat-mini-fab  class="icon-category icon-category--human">
-      <mat-icon>
-        accessibility
-      </mat-icon>
-    </button>
-    <button mat-mini-fab class="icon-category icon-category--building">
-      <mat-icon>
-        house
-      </mat-icon>
-    </button>
-    <button mat-mini-fab  class="icon-category icon-category--leaf">
-      <mat-icon>
-        eco
-      </mat-icon>
-    </button>
-    <button mat-mini-fab  class="icon-category icon-category--electricity">
-      <mat-icon>
-        flash_on
-      </mat-icon>
-    </button>
-    <button mat-mini-fab  class="icon-category icon-category--danger">
-      <mat-icon>
-        format_color_fill
-      </mat-icon>
-    </button>
+    <mat-form-field>
+      <textarea matInput placeholder="Short Description"></textarea>
+    </mat-form-field>
 
   </div>
-
-  </div>
-  <div mat-dialog-actions>
-    <input type="submit" name="report" value="Report">
-  </div>
-
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
 </div>
-
-<!--To ma wyglądać tak->https://trello.com/c/V1t6jAAw/28-stworzenie-widoku-zg%C5%82o%C5%9B-po%C5%BCar-->
-<!--po dodaniu mapki-->

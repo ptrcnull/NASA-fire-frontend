@@ -6,7 +6,7 @@ import { Snackbar } from '../../snackbar'
 @Component({
   selector: 'app-admin-panel',
   templateUrl: './admin-panel.component.html',
-  styleUrls: [ './admin-panel.component.scss' ]
+  styleUrls: ['./admin-panel.component.scss']
 })
 export class AdminPanelComponent implements OnInit {
   users: User[] = []
@@ -21,13 +21,22 @@ export class AdminPanelComponent implements OnInit {
 
   add () {
     this.userToSave = {
-      notificationRangeInMeters: 0, x: 0, y: 0, cellPhoneNumber: '', email: '', id: 0, name: '', photo: '', surname: '',
+      cellPhoneNumber: '+48509890849',
+      email: 'tomKowalski@gmail.com',
+      id: 2,
+      name: 'Tom',
+      notificationRangeInMeters: 30000,
+      photo: null,
+      surname: 'Kowalski',
+      x: 53.421132,
+      y: 14.53724,
       password: ''
     }
   }
 
   async getAllUsers () {
     this.users = await this.adminService.getAllUsers()
+    console.log(this.users)
 
   }
 

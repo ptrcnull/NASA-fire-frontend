@@ -1,9 +1,5 @@
-import { Component, Inject, Output, ViewChild } from '@angular/core'
-
-import { Router } from '@angular/router'
-import { environment } from '../../../environments/environment'
-import { HttpClient } from '@angular/common/http'
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material'
+import { Component, ViewChild } from '@angular/core'
+import { MatDialog, MatDialogRef } from '@angular/material'
 import { RegistrationPanelComponent } from '../registration-panel/registration-panel.component'
 
 

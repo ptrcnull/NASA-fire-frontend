@@ -6,7 +6,9 @@
 
   <div class="fire-avatar">
     <img src="assets/fire3.jpg" alt="">
-    <button mat-icon-button class="back-btn" (click)="backClicked()">
+    <button mat-icon-button class="back-btn"
+            routerLink="/main"
+    >
       <mat-icon>arrow_back</mat-icon>
     </button>
     <h2 class="card--title">{{ fire.address }}</h2>
@@ -25,13 +27,13 @@
 
 
   <div class="card--content">
-    <button (click)="onReport($event)" mat-raised-button class="fire-approve btn-fire icon-category">
+    <button mat-raised-button class="fire-approve btn-fire icon-category">
       <img src="assets/fire.png" class="icon invert" alt="">
       {{ fire.fireReportApproveCounter }}
     </button>
-    <h3>Opis</h3>
+    <h3>Description</h3>
     <h4 class="desc">{{ fire.description }}</h4>
-    <h3>Kategorie</h3>
+    <h3>Categories</h3>
     <div>
       <button mat-mini-fab [disabled]="!fire.arePeople" class="icon-category icon-category--human">
         <mat-icon>
