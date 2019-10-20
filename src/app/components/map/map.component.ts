@@ -51,7 +51,8 @@ export class MapComponent implements OnInit {
       reporterId: false,
       startDate: '',
       x: 53.4285,
-      y: 14.5528
+      y: 14.5528,
+      address: ''
     })
   }
 
