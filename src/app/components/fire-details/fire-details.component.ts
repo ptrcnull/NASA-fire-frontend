@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import { Location } from '@angular/common'
 import { FireNotification } from '../../models/fireNotification'
-import { LoginPanelComponent } from '../login-panel/login-panel.component'
 import { MatDialog, MatDialogRef } from '@angular/material'
 import { ReportFireComponent } from '../report-fire/report-fire.component'
-import { RegistrationPanelComponent } from '../registration-panel/registration-panel.component'
 import { FireService } from '../../services/fire.service'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-fire-details',
   templateUrl: './fire-details.component.html',
-  styleUrls: ['./fire-details.component.scss']
+  styleUrls: [ './fire-details.component.scss' ]
 })
 export class FireDetailsComponent implements OnInit {
 
@@ -19,10 +17,9 @@ export class FireDetailsComponent implements OnInit {
 
   constructor (private location: Location,
                private fireService: FireService,
-               private route: ActivatedRoute) {
-  }
-
-  constructor (private location: Location, private dialogRef: MatDialogRef<FireDetailsComponent>, public dialog: MatDialog) {
+               private route: ActivatedRoute,
+               private dialogRef: MatDialogRef<FireDetailsComponent>,
+               public dialog: MatDialog) {
   }
 
   backClicked () {
