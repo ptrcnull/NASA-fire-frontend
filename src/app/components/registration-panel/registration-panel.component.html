@@ -7,20 +7,22 @@
     <input #email type="text" name="" placeholder="Email" [(ngModel)]="user.email">
     <input #password [type]="hide ? 'password' : 'text'" name="" [pattern]="patternNormal" [formControl]="fPassword"
            placeholder="Password" required [(ngModel)]="user.password">
-    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
-      'visibility_off'}}</mat-icon>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
+        'visibility_off'}}</mat-icon>
+
+
     <mat-error *ngIf="fPassword.errors&&fPassword.errors.pattern">{{errorMgs}}</mat-error>
 
-    <app-map-picker (coords)="updateCoords($event)"></app-map-picker>
+    Pick your location by pointing on the map<app-map-picker (coords)="updateCoords($event)"></app-map-picker>
 
   </div>
-  <div mat-dialog-actions>
 
-    <button mat-mini-fab class="icon-category icon-category--add">
+  <div mat-dialog-actions>
+      <button mat-mini-fab class="icon-category icon-category--add" title="Upload you photo ">
       <mat-icon>
         add
       </mat-icon>
-    </button>
+     </button><input #photo type="file" accept="image/*;capture=camera" (change)="onPhotoChange($event)">
     <input type="submit" name="newaccount" value="Save" (click)="addUser()">
   </div>
 
