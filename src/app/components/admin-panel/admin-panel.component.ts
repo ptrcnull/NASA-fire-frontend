@@ -15,7 +15,8 @@ export class AdminPanelComponent implements OnInit {
     surname: 'Matera',
     cellPhoneNumber: '+40 0920234234',
     email: 'asdasdasd',
-    photo: 'asdsadad'
+    photo: 'asdsadad',
+    password: ''
   }]
   userToSave: User = null
 
@@ -27,7 +28,7 @@ export class AdminPanelComponent implements OnInit {
   }
 
   add () {
-    this.userToSave = { cellPhoneNumber: '', email: '', id: 0, name: '', photo: '', surname: '' }
+    this.userToSave = { cellPhoneNumber: '', email: '', id: 0, name: '', photo: '', surname: '' ,password: ''}
   }
 
   async getAllUsers () {

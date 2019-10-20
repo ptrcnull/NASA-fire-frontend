@@ -6,6 +6,7 @@ import { RegistrationPanelComponent } from './components/registration-panel/regi
 import { FireListComponent } from './components/fire-list/fire-list.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
+import { ReportFireComponent } from './components/report-fire/report-fire.component'
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'registration',
     component: RegistrationPanelComponent
+  },
+  {
+    path: 'report',
+    component: ReportFireComponent
   },
   {
     path: '',

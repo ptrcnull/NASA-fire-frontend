@@ -25,6 +25,7 @@ import { MapComponent } from './components/map/map.component'
 import { FireDetailsComponent } from './components/fire-details/fire-details.component'
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { ReportFireComponent } from './components/report-fire/report-fire.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     LoginPanelComponent,
     RegistrationPanelComponent,
     FireDetailsComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ReportFireComponent
   ],
   imports: [
     MatFormFieldModule,
@@ -52,14 +54,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     MatDialogModule,
     MatListModule,
     MatSnackBarModule,
-    MatFormFieldModule,
     MatExpansionModule,
     MatDatepickerModule,
     FormsModule,
     MatListModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    FormsModule
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

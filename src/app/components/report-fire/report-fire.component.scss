@@ -1,0 +1,83 @@
+
+.box h4 {
+  text-align: center;
+  font-family: verdana;
+  text-transform: uppercase;
+
+}
+.mat-dialog-content
+{
+  text-align: center;
+
+}
+.box input[name="report"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  background: grey;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 5s;
+}
+
+.box input[type="text"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  //color: #ff3838;
+  border-radius: 24px;
+  transition: .5s;
+  opacity: 1;
+}
+
+.mat-form-field
+{
+  border-color: black;
+}
+
+.icon-category {
+  margin-right: 4px !important;
+
+  &--human {
+    background: darkblue;
+  }
+
+  &--building {
+
+    background: deepskyblue;
+  }
+
+  &--leaf {
+    background: green;
+  }
+
+  &--electricity {
+
+    background: #ffbf00;
+  }
+
+  &--danger {
+    background: black;
+
+  }
+
+  &--questionmark {
+    background: darkblue;
+  }
+
+  &--firefighter {
+    background: #ffbf00;
+  }
+}
