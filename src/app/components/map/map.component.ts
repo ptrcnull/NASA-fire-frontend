@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, NgZone, OnInit } from '@angular/core'
 import { CommonService } from '../../services/common.service'
 import { FireNotification } from '../../models/fireNotification'
 import { Router } from '@angular/router'
@@ -22,7 +22,7 @@ export class MapComponent implements OnInit {
     center: latLng([ 51.9194, 19.1451 ])
   }
 
-  constructor (private service: CommonService, private router: Router) {
+  constructor (private service: CommonService, private ngZone: NgZone, private router: Router) {
   }
 
   ngOnInit () {}
@@ -68,7 +68,7 @@ export class MapComponent implements OnInit {
     })
       .addTo(map)
       .on('click', () => {
-        return this.router.navigate([`/main/details/${ fire.id }`])
+        return this.ngZone.run(() => this.router.navigate([`/main/details/${ fire.id }`]))
       })
   }
 }
