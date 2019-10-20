@@ -40,7 +40,7 @@ export class MapComponent implements OnInit {
 
     this.dialog.open(ReportFireComponent, {
       width: '80vw',
-      height: 'auto'
+      height: '80vh'
     })
 
   }
