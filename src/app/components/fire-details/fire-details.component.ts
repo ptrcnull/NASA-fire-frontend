@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core'
 import { Location } from '@angular/common'
 import { FireNotification } from '../../models/fireNotification'
 import { MatDialog, MatDialogRef } from '@angular/material'
-import { ReportFireComponent } from '../report-fire/report-fire.component'
 import { FireService } from '../../services/fire.service'
 import { ActivatedRoute } from '@angular/router'
 
@@ -17,9 +16,7 @@ export class FireDetailsComponent implements OnInit {
 
   constructor (private location: Location,
                private fireService: FireService,
-               private route: ActivatedRoute,
-               private dialogRef: MatDialogRef<FireDetailsComponent>,
-               public dialog: MatDialog) {
+               private route: ActivatedRoute) {
   }
 
   backClicked () {
