@@ -14,7 +14,7 @@
   </tr>
 </table>
 
-<h4>This repository contains frontend part of ICFire project.</h4>
+<h4>This repository contains frontend part of <a href="https://2019.spaceappschallenge.org/challenges/living-our-world/spot-fire-v20/teams/icfire/project">ICFire</a> project.</h4>
 
 Logo created by <a href="https://www.linkedin.com/in/alanrej/">Alan Rej</a>
 
